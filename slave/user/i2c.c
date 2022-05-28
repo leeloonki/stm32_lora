@@ -1,8 +1,8 @@
 /*
  * @Date: 2022-05-27 11:54:46
  * @LastEditors: leeloonki 917708562@qq.com
- * @LastEditTime: 2022-05-28 11:41:25
- * @FilePath: \slave\user\i2c.c
+ * @LastEditTime: 2022-05-28 16:33:17
+ * @FilePath: \proj\slave\user\i2c.c
  */
 #include "i2c.h"
 #include "stm32f10x.h"
@@ -46,7 +46,7 @@ uint16_t getliuming(){
     // 发送通讯地址和通讯模式
     I2C_Send7bitAddress(I2C1,0x46,I2C_Direction_Transmitter);
     while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
-    // 发送数据
+    // 
     I2C_SendData(I2C1,0x21);
     while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED));
     I2C_GenerateSTOP(I2C1,ENABLE);
