@@ -5,8 +5,7 @@
 #include "lora.h"
 
 uint16_t guangzhao;
-uint8_t sd = 0;
-extern uint16_t para_request[6];
+extern uint16_t para_response[6];
 int main()
 {
 	JTAG_SWD_Config();//关闭JTAG功能，打开SWD功能
@@ -33,9 +32,10 @@ void USART3_IRQHandler(){
 	}
 	if(USART_GetITStatus (USART3,USART_IT_TC)==SET){
 		USART_ClearITPendingBit(USART3,USART_IT_TC);
-			para_request[4] = guangzhao;
-			USART3_SendStr(para_request,sizeof(para_request)/sizeof(uint16_t));
+		para_response[4] = guangzhao;
+		USART3_SendStr(para_response,sizeof(para_response)/sizeof(uint16_t));
 	}else{
+
 	}
 }
 
