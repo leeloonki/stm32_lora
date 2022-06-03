@@ -1,14 +1,14 @@
 /*
  * @Date: 2022-05-27 09:13:44
  * @LastEditors: leeloonki 917708562@qq.com
- * @LastEditTime: 2022-05-28 08:27:54
+ * @LastEditTime: 2022-05-28 18:31:30
  * @FilePath: \proj\master\user\lora.c
  */
 #include "lora.h"
 #include "stm32f10x.h"
 
 #include "usart.h"
-uint16_t para[6] = {0xC0,0x00,0x01,0x1A,0x3C,0x40};	//默认工作参数 地址0x01 频段0x3c
+uint16_t para[10] = {0xC0,0x00,0x01,0x1A,0x3C,0x40};	//默认工作参数 地址0x01 频段0x3c
 uint16_t para_saved[6] = {0xC1,0xC1,0xC1};
 uint16_t para_request[6] = {0xff,0xff,0x3c};	//广播+0x3c频段
 

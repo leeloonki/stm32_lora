@@ -1,3 +1,10 @@
+/*
+ * @Date: 2022-06-03 09:49:16
+ * @LastEditors: leeloonki 917708562@qq.com
+ * @LastEditTime: 2022-06-03 17:35:37
+ * @FilePath: \master\user\main.c
+ * @Description: 
+ */
 // 主板
 #include "main.h"
 #include "string.h"
@@ -7,8 +14,6 @@
 uint16_t recv[30];
 uint8_t rc = 0;
 uint16_t data = 0;
-
-
 
 int main()
 {

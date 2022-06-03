@@ -1,8 +1,8 @@
 /*
  * @Date: 2022-05-27 08:04:07
  * @LastEditors: leeloonki 917708562@qq.com
- * @LastEditTime: 2022-05-28 08:21:40
- * @FilePath: \proj\master\user\usart.c
+ * @LastEditTime: 2022-06-03 16:06:36
+ * @FilePath: \master\user\usart.c
  */
 #include "usart.h"
 static void NVIC_Configuration(void);
